@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T22:58:44.633Z",
+  "title": "Design System: بن عسير",
+  "extensions": {
+    "colorMeta": {
+      "brown": {
+        "role": "primary",
+        "displayName": "Coffee Brown"
+      },
+      "lime": {
+        "role": "primary",
+        "displayName": "Fresh Coffee Leaf"
+      },
+      "forest": {
+        "role": "secondary",
+        "displayName": "Mountain Forest"
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Warm Cream"
+      }
+    },
+    "shadows": [
+      {
+        "name": "dialog",
+        "value": "0 15px 60px #10261740",
+        "purpose": "Modal overlays."
+      },
+      {
+        "name": "toast",
+        "value": "0 5px 20px #10261730",
+        "purpose": "Transient feedback."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Shared movement easing."
+      },
+      {
+        "name": "drawer",
+        "value": ".35s",
+        "purpose": "Entry from right."
+      },
+      {
+        "name": "button",
+        "value": "background .2s,transform .25s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Hover lift by 2px."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "800px"
+      },
+      {
+        "name": "wide-min",
+        "value": "1600px"
+      }
+    ],
+    "focus": {
+      "outline": "3px solid #758c10",
+      "outlineOffset": "4px"
+    },
+    "backdrop": "#11201799",
+    "reducedMotion": "CSS disables animations and transitions and restores auto document scrolling."
+  },
+  "components": [
+    {
+      "name": "Primary",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Implemented action variant.",
+      "html": "<button dir=\"rtl\" class=\"ds-button\">أضف للسلة</button>",
+      "css": ".ds-button{font:700 17px/1.4 Tajawal,sans-serif;min-height:48px;border:1px solid transparent;border-radius:5px;padding:13px 25px;cursor:pointer;transition:background .2s,transform .25s cubic-bezier(.16,1,.3,1)}.ds-button:hover{transform:translateY(-2px)}.ds-button:focus-visible{outline:3px solid #758c10;outline-offset:4px}.ds-button{background:var(--forest,#20392c);color:#fff;}.ds-button:hover{background:#34513c}"
+    },
+    {
+      "name": "Lime",
+      "kind": "button",
+      "refersTo": "button-lime",
+      "description": "Implemented action variant.",
+      "html": "<button dir=\"rtl\" class=\"ds-button\">اكتشف مذاق عسير</button>",
+      "css": ".ds-button{font:700 17px/1.4 Tajawal,sans-serif;min-height:48px;border:1px solid transparent;border-radius:5px;padding:13px 25px;cursor:pointer;transition:background .2s,transform .25s cubic-bezier(.16,1,.3,1)}.ds-button:hover{transform:translateY(-2px)}.ds-button:focus-visible{outline:3px solid #758c10;outline-offset:4px}.ds-button{background:var(--lime,#a5c611);color:#243321;}.ds-button:hover{background:#badb29}"
+    },
+    {
+      "name": "Outline",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Implemented action variant.",
+      "html": "<button dir=\"rtl\" class=\"ds-button\">استكشف باقة الضيافة</button>",
+      "css": ".ds-button{font:700 17px/1.4 Tajawal,sans-serif;min-height:48px;border:1px solid transparent;border-radius:5px;padding:13px 25px;cursor:pointer;transition:background .2s,transform .25s cubic-bezier(.16,1,.3,1)}.ds-button:hover{transform:translateY(-2px)}.ds-button:focus-visible{outline:3px solid #758c10;outline-offset:4px}.ds-button{background:transparent;color:var(--brown,#4f2a17);border-color:var(--brown,#4f2a17);}.ds-button:hover{background:#eee6d6}"
+    },
+    {
+      "name": "Text field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Paper field with visible label.",
+      "html": "<label class=\"ds-label\" dir=\"rtl\">الاسم التوضيحي<input class=\"ds-field\" placeholder=\"مثال: ضيف عسير\"></label>",
+      "css": ".ds-label{font:15px Tajawal,sans-serif}.ds-field{display:block;font:17px Tajawal,sans-serif;padding:11px 14px;background:var(--paper,#fffdfa);color:var(--ink,#322b23);border:1px solid var(--line,#ded7c9);border-radius:6px}.ds-field:focus-visible{outline:3px solid #758c10;outline-offset:4px}"
+    },
+    {
+      "name": "Catalog filters",
+      "kind": "chip",
+      "refersTo": "filter-selected",
+      "description": "Selected and default category states.",
+      "html": "<div dir=\"rtl\"><button class=\"ds-filter ds-selected\">كل المنتجات</button><button class=\"ds-filter\">قهوة سعودية</button></div>",
+      "css": ".ds-filter{font:15px Tajawal,sans-serif;border:0;border-radius:4px;padding:9px 17px;background:transparent;color:var(--ink,#322b23);cursor:pointer}.ds-selected{background:var(--forest,#20392c);color:white}.ds-filter:hover:not(.ds-selected){background:#eae4d7}.ds-filter:focus-visible{outline:3px solid #758c10;outline-offset:4px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Lime underline for active and hover states.",
+      "html": "<nav class=\"ds-nav\" dir=\"rtl\"><a class=\"ds-active\" href=\"#\">الرئيسية</a><a href=\"#products\">تسوّق البن</a></nav>",
+      "css": ".ds-nav{display:flex;gap:31px;font:500 16px Tajawal,sans-serif}.ds-nav a{padding:10px 0;color:var(--ink,#322b23);text-decoration:none;border-bottom:2px solid transparent}.ds-nav a:hover,.ds-nav a.ds-active{color:var(--brown,#4f2a17);border-color:var(--lime,#a5c611)}.ds-nav a:focus-visible{outline:3px solid #758c10;outline-offset:4px}"
+    },
+    {
+      "name": "Product image well",
+      "kind": "card",
+      "refersTo": "product-visual",
+      "description": "Original photo slot with badge and quick add. Preview omits photo rather than substituting artwork.",
+      "html": "<article class=\"ds-card\" dir=\"rtl\"><div class=\"ds-well\"><span class=\"ds-badge\">مذاق الضيافة</span><button class=\"ds-add\" aria-label=\"أضف للسلة\"><svg viewBox=\"0 0 24 24\"><path d=\"M12 5v14M5 12h14\"/></svg></button></div><h3>بن عسير</h3><strong>٣٨ ر.س</strong></article>",
+      "css": ".ds-card{width:260px;font-family:Tajawal,sans-serif;color:var(--brown,#4f2a17)}.ds-well{position:relative;aspect-ratio:1;background:#ede6d8;border-radius:var(--radius,12px)}.ds-badge{position:absolute;right:13px;top:13px;background:#fffdf6;border-radius:3px;font-size:12px;padding:3px 10px}.ds-add{position:absolute;left:12px;bottom:12px;width:39px;height:39px;background:var(--paper,#fffdfa);border:0;border-radius:50%;cursor:pointer}.ds-add:hover{background:var(--lime,#a5c611)}.ds-add:focus-visible{outline:3px solid #758c10;outline-offset:4px}.ds-add svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.7}.ds-card h3{font-size:20px;margin:15px 0 3px}.ds-card strong{font-size:20px;font-weight:800}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Asir Coffee Table",
+    "overview": "Supplied mountain illustrations, packaging and association artwork establish identity. Warm surfaces and measured Arabic typography give shopping controls a hospitable, grounded character.",
+    "keyCharacteristics": [
+      "Original artwork leads",
+      "Brown headings and forest controls",
+      "Lime accents on cream",
+      "Flat catalog",
+      "Local Tajawal"
+    ],
+    "rules": [
+      {
+        "name": "Overlay elevation",
+        "body": "Catalog surfaces remain flat; overlays carry shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve supplied artwork.",
+      "Do maintain Arabic RTL and visible focus.",
+      "Do retain demo disclosures."
+    ],
+    "donts": [
+      "Do not crop mobile hero art.",
+      "Do not invent commercial proof.",
+      "Do not add shadows to every card."
+    ]
+  }
+}
